@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		dockerfile = dockerfile
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Depoyment", "Depoyment", "{17F5C0C5-C716-419E-986E-E73987F520C7}"
+	ProjectSection(SolutionItems) = preProject
+		deployment.yaml = deployment.yaml
+		svc.yaml = svc.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
