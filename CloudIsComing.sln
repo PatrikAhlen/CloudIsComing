@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		dockerfile = dockerfile
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Depoyment", "Depoyment", "{17F5C0C5-C716-419E-986E-E73987F520C7}"
-	ProjectSection(SolutionItems) = preProject
-		deployment.yaml = deployment.yaml
-		svc.yaml = svc.yaml
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiTests", "ApiTests\ApiTests.csproj", "{23E1C361-7724-4B86-BF12-115DC93FCAEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTests", "ApiTests\ApiTests.csproj", "{23E1C361-7724-4B86-BF12-115DC93FCAEA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{F5EC791A-D2F4-44B8-B301-0F687B925DB8}"
+	ProjectSection(SolutionItems) = preProject
+		infrastructure\deployment.yml = infrastructure\deployment.yml
+		infrastructure\svc.yml = infrastructure\svc.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
