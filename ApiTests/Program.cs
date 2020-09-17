@@ -66,15 +66,17 @@ namespace ApiTests
         {
             try
             {
-                string fmt = "00000000.##";
-                string formatString = " {0,15:" + fmt + "}";
+                var fmt = "00000000.##";
+                var formatString = " {0,10:" + fmt + "}";
+                var formatted = string.Format(formatString, index);
 
                 var now = DateTime.Now;
                 var response = await httpClient.GetAsync("http://localhost:50150/api/appinfo");
                 response.EnsureSuccessStatusCode();
                 var responseBody = await response.Content.ReadAsStringAsync();
-                Console.Write(formatString, index);
-                Console.WriteLine($"requested: {now.ToLongTimeString()}, returned: {DateTime.Now.ToLongTimeString()} : result: {responseBody}");
+                
+                //Console.Write(formatString, index);
+                Console.WriteLine($"{formatted} sent: {now.ToLongTimeString()}, returned: {DateTime.Now.ToLongTimeString()} : result: {responseBody}");
                 
 
             }
