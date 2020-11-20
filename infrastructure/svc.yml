@@ -4,8 +4,8 @@ metadata:
   name: cloudiscoming-service
   labels:
     app: cloudiscoming-app
-spec:
-  type: NodePort
+spec:  
+  type: LoadBalancer
   selector:
     app: cloudiscoming-app
   ports:
@@ -13,3 +13,23 @@ spec:
       name: http
       port: 80      
       targetPort: 80
+
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: cloudiscoming-ingress  
+#   annotations:
+#     kubernetes.io/ingress.class: "traefik"
+# spec:
+#   rules:
+#   - http:
+#       paths:
+#       - path: /cloud
+#         pathType: Prefix
+#         backend:
+#           service:
+#               name: cloudiscoming-service          
+#               port: 
+#                 number: 80
+              
