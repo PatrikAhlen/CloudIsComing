@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cloudiscoming-service
+  namespace: cloudiscoming
   labels:
     app: cloudiscoming-app
 spec:
@@ -20,6 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cloudiscoming-deploy
+  namespace: cloudiscoming
   labels:
     app: cloudiscoming-app
     test: test

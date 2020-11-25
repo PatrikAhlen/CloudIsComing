@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cloudiscoming-service
+  namespace: cloudiscoming
   labels:
     app: cloudiscoming-app
 spec:  
